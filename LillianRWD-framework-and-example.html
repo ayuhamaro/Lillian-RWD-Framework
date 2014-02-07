@@ -18,7 +18,9 @@
             vertical-align: top;
             font-size: medium;		/* 修正繼承的屬性 */
             letter-spacing: 0;		/* 修正繼承的屬性 */
-            word-spacing: 0;		/* 修正繼承的屬性 */ }
+            word-spacing: 0;		/* 修正繼承的屬性 */
+            *display: inline;       /* 修正IE7及以下版本的inline-block問題 */
+            zoom: 1;                /* 修正IE7及以下版本的inline-block問題 */ }
         .row-block > dt{ display: block; }  /* 修正對dt元素的影響 */
         /* 區塊元素樣式定義 */
         .block1{ width: 6.25%; }
@@ -88,11 +90,6 @@
             .tl-forced-center{ margin: 0 auto; display: block; }
             .tl-forced-inside-center{ text-align: center; }}
     </style>
-    <!--[if lte IE 7]>
-    <style type="text/css">
-        .row-block > *{ *display: inline; zoom: 1; }    /* 修正IE7及以下版本的inline-block問題 */
-    </style>
-    <![endif]-->
     <!-- 本框架僅致於 Lillian Chieh，感謝妳很認真地聆聽我的想法 -->
     <style type="text/css">
         li{
