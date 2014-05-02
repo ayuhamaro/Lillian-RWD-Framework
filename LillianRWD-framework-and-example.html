@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Lillian - Responsive Web Design CSS Framework</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style type="text/css">
         /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
         html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
@@ -11,16 +12,18 @@
         /* 行元素樣式定義 */
         .row-block{
             font-size: 0;			/* 清除inline-block元素間隙的空白For FF、Chrome、Opera & IE */
-            letter-spacing: -4px;	/* 清除inline-block元素間隙的空白For Safari */
-            word-spacing: -4px;		/* 清除inline-block元素間隙的空白For Safari */ }
+            letter-spacing: -5px;	/* 清除inline-block元素間隙的空白For Safari */
+            /*word-spacing: normal;*/		/* 清除inline-block元素間隙的空白For Safari */ 
+		}
         .row-block > *{
             display: inline-block;
             vertical-align: top;
             font-size: medium;		/* 修正繼承的屬性 */
-            letter-spacing: 0;		/* 修正繼承的屬性 */
-            word-spacing: 0;		/* 修正繼承的屬性 */
+            letter-spacing: 0px;		/* 修正繼承的屬性 */
+            /*word-spacing: normal;	*/	/* 修正繼承的屬性 */
             *display: inline;       /* 修正IE7及以下版本的inline-block問題 */
-            zoom: 1;                /* 修正IE7及以下版本的inline-block問題 */ }
+            zoom: 1;                /* 修正IE7及以下版本的inline-block問題 */ 
+		}
         .row-block > dt{ display: block; }  /* 修正對dt元素的影響 */
         /* 區塊元素樣式定義 */
         .block1{ width: 6.25%; }
