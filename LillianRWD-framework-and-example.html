@@ -3,11 +3,13 @@
 <head>
     <title>Lillian - Responsive Web Design CSS Framework</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <style type="text/css">
         /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
         html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
     </style>
     <!-- Lillian - Responsive Web Design CSS Framework Begin -->
+    <meta name="viewport" content="width=device-width">
     <style type="text/css" media="screen">
         /* 行元素樣式定義 */
         .row-block{
@@ -52,36 +54,40 @@
         .block16{ width: 100%; }
         .block-center{ margin: 0 auto; }
         .block-inside-center{
-            text-align: center; justify-content: center;
+            text-align: center;
+            justify-content: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
         }
         .block-inside-center > *{
             text-align: left;
         }
         /* 響應式切換定義-網格合併 */
-        @media screen and (min-width: 1px) and (max-width: 480px){
+        @media screen and (min-device-width: 1px) and (max-device-width: 480px){
             .block1, .block2, .block3{ width: 33%; }
             .block4, .block5, .block6, .block7{ width: 66%; }
             .block8, .block9, .block10, .block11, .block12,
             .block13, .block14, .block15{ width: 100%; }}
-        @media screen and (min-width: 481px) and (max-width: 640px){
+        @media screen and (min-device-width: 481px) and (max-device-width: 640px){
             .block1, .block2, .block3{ width: 25%; }
             .block4, .block5, .block6, .block7{ width: 50%; }
             .block8, .block9, .block10, .block11{ width: 75% }
             .block12, .block13, .block14, .block15{ width: 100%; }}
-        @media screen and (min-width: 640px) and (max-width: 860px){
+        @media screen and (min-device-width: 640px) and (max-device-width: 860px){
             .block1, .block2, .block3{ width: 20%; }
             .block4, .block5, .block6{ width: 40%; }
             .block7, .block8, .block9{ width: 60%; }
             .block10, .block11, .block12{ width: 80%; }
             .block13, .block14, .block15{ width: 100%; }}
-        @media screen and (min-width: 861px) and (max-width: 1024px){
+        @media screen and (min-device-width: 861px) and (max-device-width: 1024px){
             .block1, .block2{ width: 14%; }
             .block3, .block4{ width: 26%; }
             .block5, .block6{ width: 39%; }
             .block7, .block8{ width: 52%; }
             .block9, .block10{ width: 65%; }
             .block11, .block12{ width: 77%; }}
-        @media screen and (min-width: 1025px) and (max-width: 1280px){
+        @media screen and (min-device-width: 1025px) and (max-device-width: 1280px){
             .block1{ width: 8%; }
             .block2{ width: 14%; }
             .block3{ width: 20%; }
@@ -90,29 +96,47 @@
             .block6{ width: 38%; }
             .block7{ width: 44%; }}
         /* 響應式切換定義-裝置手動樣式 */
-        @media screen and (min-width: 1px) and (max-width: 640px){
+        @media screen and (min-device-width: 1px) and (max-device-width: 640px){
             .mb-forced-row{ width: 100%; }
             .mb-forced-hide{ display: none;}
             .mb-forced-center{ margin: 0 auto; display: block; }
-            .mb-forced-inside-center{ text-align: center; justify-content: center; }
+            .mb-forced-inside-center{
+                text-align: center;
+                justify-content: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+            }
             .mb-forced-inside-center > *{
                 text-align: left;
             }
         }
-        @media screen and (min-width: 641px) and (max-width: 960px){
+        @media screen and (min-device-width: 641px) and (max-device-width: 860px){
             .mb-forced-row, .tl-forced-row{ width: 100%; }
             .mb-forced-hide, .tl-forced-hide{ display: none;}
             .mb-forced-center, .tl-forced-center{ margin: 0 auto; display: block; }
-            .mb-forced-inside-center, .tl-forced-inside-center{ text-align: center; justify-content: center; }
+            .mb-forced-inside-center, .tl-forced-inside-center{
+                text-align: center;
+                justify-content: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+            }
             .mb-forced-inside-center > *, .tl-forced-inside-center > *{
                 text-align: left;
             }
         }
-        @media screen and (min-width: 961px) and (max-width: 1280px){
+        @media screen and (min-device-width: 861px) and (max-device-width: 1280px){
             .tl-forced-row{ width: 100%; }
             .tl-forced-hide{ display: none; }
             .tl-forced-center{ margin: 0 auto; display: block; }
-            .tl-forced-inside-center{ text-align: center; justify-content: center; }
+            .tl-forced-inside-center{
+                text-align: center;
+                justify-content: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+            }
             .tl-forced-inside-center > *{
                 text-align: left;
             }
