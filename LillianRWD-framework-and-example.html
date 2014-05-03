@@ -8,11 +8,12 @@
         /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
         html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
     </style>
+    
     <!-- Lillian - Responsive Web Design CSS Framework Begin -->
     <meta name="viewport" content="width=device-width">
     <style type="text/css" media="screen">
         /* 行元素樣式定義 */
-        .row-block{
+        .row{
             letter-spacing: -0.31em;
             *letter-spacing: normal;
             *word-spacing: -0.43em;
@@ -23,8 +24,8 @@
             display: -ms-flexbox;
             -ms-flex-flow: row wrap;
         }
-        .opera-only :-o-prefocus,.row-block{word-spacing: -0.43em}
-        .row-block > *{
+        .opera-only :-o-prefocus,.row{word-spacing: -0.43em}
+        .row > *{
             font-size: medium;
             display: inline-block;
             *display: inline;
@@ -34,7 +35,7 @@
             vertical-align: top;
             text-rendering: auto;
         }
-        .row-block > dt{ display: block; }  /* 修正對dt元素的影響 */
+        .row > dt{ display: block; }  /* 修正對dt元素的影響 */
         /* 區塊元素樣式定義 */
         .block1{ width: 6.25%; }
         .block2{ width: 12.5%; }
@@ -53,41 +54,41 @@
         .block15{ width: 93.75%; }
         .block16{ width: 100%; }
         .block-center{ margin: 0 auto; }
-        .block-inside-center{
+        .block-in-center{
             text-align: center;
             justify-content: center;
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             -webkit-justify-content: center;
         }
-        .block-inside-center > *{
+        .block-in-center > *{
             text-align: left;
         }
         /* 響應式切換定義-網格合併 */
-        @media screen and (min-device-width: 1px) and (max-device-width: 480px){
+        @media screen and (min-width: 1px) and (max-width: 480px){
             .block1, .block2, .block3{ width: 33%; }
             .block4, .block5, .block6, .block7{ width: 66%; }
             .block8, .block9, .block10, .block11, .block12,
             .block13, .block14, .block15{ width: 100%; }}
-        @media screen and (min-device-width: 481px) and (max-device-width: 640px){
+        @media screen and (min-width: 481px) and (max-width: 640px){
             .block1, .block2, .block3{ width: 25%; }
             .block4, .block5, .block6, .block7{ width: 50%; }
             .block8, .block9, .block10, .block11{ width: 75% }
             .block12, .block13, .block14, .block15{ width: 100%; }}
-        @media screen and (min-device-width: 640px) and (max-device-width: 860px){
+        @media screen and (min-width: 640px) and (max-width: 860px){
             .block1, .block2, .block3{ width: 20%; }
             .block4, .block5, .block6{ width: 40%; }
             .block7, .block8, .block9{ width: 60%; }
             .block10, .block11, .block12{ width: 80%; }
             .block13, .block14, .block15{ width: 100%; }}
-        @media screen and (min-device-width: 861px) and (max-device-width: 1024px){
+        @media screen and (min-width: 861px) and (max-width: 1024px){
             .block1, .block2{ width: 14%; }
             .block3, .block4{ width: 26%; }
             .block5, .block6{ width: 39%; }
             .block7, .block8{ width: 52%; }
             .block9, .block10{ width: 65%; }
             .block11, .block12{ width: 77%; }}
-        @media screen and (min-device-width: 1025px) and (max-device-width: 1280px){
+        @media screen and (min-width: 1025px) and (max-width: 1280px){
             .block1{ width: 8%; }
             .block2{ width: 14%; }
             .block3{ width: 20%; }
@@ -96,48 +97,48 @@
             .block6{ width: 38%; }
             .block7{ width: 44%; }}
         /* 響應式切換定義-裝置手動樣式 */
-        @media screen and (min-device-width: 1px) and (max-device-width: 640px){
-            .mb-forced-row{ width: 100%; }
-            .mb-forced-hide{ display: none;}
-            .mb-forced-center{ margin: 0 auto; display: block; }
-            .mb-forced-inside-center{
+        @media screen and (min-width: 1px) and (max-width: 640px){
+            .mb-fd-row{ width: 100%; }
+            .mb-fd-hide{ display: none;}
+            .mb-fd-center{ margin: 0 auto; display: block; }
+            .mb-fd-in-center{
                 text-align: center;
                 justify-content: center;
                 -webkit-box-pack: center;
                 -ms-flex-pack: center;
                 -webkit-justify-content: center;
             }
-            .mb-forced-inside-center > *{
+            .mb-fd-in-center > *{
                 text-align: left;
             }
         }
-        @media screen and (min-device-width: 641px) and (max-device-width: 860px){
-            .mb-forced-row, .tl-forced-row{ width: 100%; }
-            .mb-forced-hide, .tl-forced-hide{ display: none;}
-            .mb-forced-center, .tl-forced-center{ margin: 0 auto; display: block; }
-            .mb-forced-inside-center, .tl-forced-inside-center{
+        @media screen and (min-width: 641px) and (max-width: 767px){
+            .mb-fd-row, .tp-fd-row{ width: 100%; }
+            .mb-fd-hide, .tp-fd-hide{ display: none;}
+            .mb-fd-center, .tp-fd-center{ margin: 0 auto; display: block; }
+            .mb-fd-in-center, .tp-fd-in-center{
                 text-align: center;
                 justify-content: center;
                 -webkit-box-pack: center;
                 -ms-flex-pack: center;
                 -webkit-justify-content: center;
             }
-            .mb-forced-inside-center > *, .tl-forced-inside-center > *{
+            .mb-fd-in-center > *, .tp-fd-in-center > *{
                 text-align: left;
             }
         }
-        @media screen and (min-device-width: 861px) and (max-device-width: 1280px){
-            .tl-forced-row{ width: 100%; }
-            .tl-forced-hide{ display: none; }
-            .tl-forced-center{ margin: 0 auto; display: block; }
-            .tl-forced-inside-center{
+        @media screen and (min-width: 768px) and (max-width: 1280px){
+            .tp-fd-row{ width: 100%; }
+            .tp-fd-hide{ display: none; }
+            .tp-fd-center{ margin: 0 auto; display: block; }
+            .tp-fd-in-center{
                 text-align: center;
                 justify-content: center;
                 -webkit-box-pack: center;
                 -ms-flex-pack: center;
                 -webkit-justify-content: center;
             }
-            .tl-forced-inside-center > *{
+            .tp-fd-in-center > *{
                 text-align: left;
             }
         }
@@ -145,10 +146,10 @@
     <!-- Lillian - Responsive Web Design CSS Framework End -->
     
     <style type="text/css">
-        .row-block [class *= "block"]{
+        .row [class *= "block"]{
             height: 30px;
         }
-        .row-block{
+        .row{
             /*margin-top: 15px;*/
             /*margin-bottom: 15px;*/
             background-color: #dcdcdc;
@@ -171,7 +172,7 @@
 </head>
 <body>
     <p>Lillian - Responsive Web Design CSS Framework 為純CSS的自適應框架，以16級比例區塊為基礎。提供豐富手動強制功能，以彌補比例運算的死角。僅靠框架就可以輕鬆完成16種基礎功能，無需自行撰寫樣式。</p>
-    <div class="row-block">
+    <div class="row">
         <div class="block1 color-p">1</div>
         <div class="block1 color-g">1</div>
         <div class="block1 color-p">1</div>
@@ -191,7 +192,7 @@
     </div>
     
     <p>1. 寬度不限縮均分四等份</p>
-    <ul class="row-block">
+    <ul class="row">
         <li class="block4 color-p">Block4</li>
         <li class="block4 color-g">Block4</li>
         <li class="block4 color-p">Block4</li>
@@ -199,7 +200,7 @@
     </ul>
     
     <p>2. 寬度不限縮不均分四份</p>
-    <ul class="row-block">
+    <ul class="row">
         <li class="block1 color-p">Block1</li>
         <li class="block3 color-g">Block3</li>
         <li class="block5 color-p">Block5</li>
@@ -207,7 +208,7 @@
     </ul>
     
     <p>3. 寬度限縮四等份</p>
-    <ul class="block12 row-block">
+    <ul class="block12 row">
         <li class="block4 color-p">Block4</li>
         <li class="block4 color-g">Block4</li>
         <li class="block4 color-p">Block4</li>
@@ -215,7 +216,7 @@
     </ul>
     
     <p>4. 寬度限縮不均分四份</p>
-    <ul class="block12 row-block">
+    <ul class="block12 row">
         <li class="block1 color-p">Block1</li>
         <li class="block3 color-g">Block3</li>
         <li class="block5 color-p">Block5</li>
@@ -223,7 +224,7 @@
     </ul>
     
     <p>5. 寬度限縮四等份置中</p>
-    <ul class="block12 row-block block-center">
+    <ul class="block12 row block-center">
         <li class="block4 color-p">Block4</li>
         <li class="block4 color-g">Block4</li>
         <li class="block4 color-p">Block4</li>
@@ -231,7 +232,7 @@
     </ul>
     
     <p>6. 寬度不限縮四等份內容置中</p>
-    <ul class="row-block block-inside-center">
+    <ul class="row block-in-center">
         <li class="block3 color-p">Block3</li>
         <li class="block3 color-g">Block3</li>
         <li class="block3 color-p">Block3</li>
@@ -239,7 +240,7 @@
     </ul>
     
     <p>7. 寬度限縮不均分四份置中</p>
-    <ul class="block12 row-block block-center">
+    <ul class="block12 row block-center">
         <li class="block1 color-p">Block1</li>
         <li class="block3 color-g">Block3</li>
         <li class="block5 color-p">Block5</li>
@@ -247,7 +248,7 @@
     </ul>
 
     <p>8. 寬度不限縮不均分四份內容置中</p>
-    <ul class="row-block block-inside-center">
+    <ul class="row block-in-center">
         <li class="block1 color-p">Block1</li>
         <li class="block2 color-g">Block2</li>
         <li class="block3 color-p">Block3</li>
@@ -255,47 +256,47 @@
     </ul>
     
     <p>9. 行動電話解析度強制為整行</p>
-    <ul class="row-block block-inside-center">
-        <li class="block1 color-p mb-forced-row">Block1</li>
+    <ul class="row block-in-center">
+        <li class="block1 color-p mb-fd-row">Block1</li>
     </ul>
     
     <p>10. 行動電話解析度強制內容為置中</p>
-    <ul class="row-block">
-        <li class="block4 color-p mb-forced-center">Block4</li>
+    <ul class="row">
+        <li class="block4 color-p mb-fd-center">Block4</li>
     </ul>
     
     <p>11. 行動電話解析度強制多項內容為置中</p>
-    <ul class="row-block mb-forced-inside-center">
+    <ul class="row mb-fd-in-center">
         <li class="block2 color-p">Block2</li>
         <li class="block2 color-g">Block2</li>
     </ul>
     
     <p>12. 行動電話解析度強制隱藏</p>
-    <ul class="row-block">
+    <ul class="row">
         <li class="block2 color-p">Block2</li>
-        <li class="block2 color-g mb-forced-hide">Block2(小於手機解析度就會消失)</li>
+        <li class="block2 color-g mb-fd-hide">Block2(小於手機解析度就會消失)</li>
     </ul>
     
     <p>13. 平板或行動電話解析度強制為整行</p>
-    <ul class="row-block block-inside-center">
-        <li class="block1 color-p tl-forced-row mb-forced-row">Block1</li>
+    <ul class="row block-in-center">
+        <li class="block1 color-p tp-fd-row mb-fd-row">Block1</li>
     </ul>
     
     <p>14. 平板或行動電話解析度強制內容為置中</p>
-    <ul class="row-block">
-        <li class="block4 color-p tl-forced-center  mb-forced-center">Block4</li>
+    <ul class="row">
+        <li class="block4 color-p tp-fd-center  mb-fd-center">Block4</li>
     </ul>
     
     <p>15. 平板或行動電話解析度強制多項內容為置中</p>
-    <ul class="row-block tl-forced-inside-center mb-forced-inside-center">
+    <ul class="row tp-fd-in-center mb-fd-in-center">
         <li class="block2 color-p">Block2</li>
         <li class="block2 color-g">Block2</li>
     </ul>
     
     <p>16. 平板或行動電話解析度強制隱藏</p>
-    <ul class="row-block">
-        <li class="block2 color-p mb-forced-hide">Block2(小於手機解析度就會消失)</li>
-        <li class="block2 color-g tl-forced-hide mb-forced-hide">Block2(小於平板解析度就會消失)</li>
+    <ul class="row">
+        <li class="block2 color-p mb-fd-hide">Block2(小於手機解析度就會消失)</li>
+        <li class="block2 color-g tp-fd-hide mb-fd-hide">Block2(小於平板解析度就會消失)</li>
     </ul>
 </body>
 </html>
