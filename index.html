@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lillian - Responsive Web Design CSS Framework</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style type="text/css">
+        /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,div,div,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,div{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+    </style>
+    
+    <!-- Lillian - Responsive Web Design CSS Framework Begin -->
+    <meta name="viewport" content="width=device-width">
+    <link href="lillian.css" type="text/css" rel="stylesheet" />
+    <!-- Lillian - Responsive Web Design CSS Framework End -->
+    
+    <style type="text/css">
+        .row, .flex-row{
+            background-color: #dcdcdc;
+        }
+        .row > *, .flex-row > *{
+            height: 50px;
+        }
+        p{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #CD3333;
+        }
+        body{
+            padding: 10px;
+        }
+        .color-p{
+            background-color: #ffc0cb;
+        }
+        .color-g{
+            background-color: #fbb450;
+        }
+        h2{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: larger;
+            color: #8B5A00;
+            font-weight: bold;
+        }
+        h1{
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #8B6914;
+        }
+        .init{
+            color: #8B5A00;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lillian - Responsive Web Design CSS Framework</h1>
+    <div class="init">純CSS的自適應框架，以16級比例區塊(Block)為基礎。提供豐富手動強制功能，以彌補比例運算的死角。僅靠框架就可以輕鬆完成16種基礎功能，無需自行撰寫樣式。<br />以及半自適應的彈性列模式，方便部份固定寬度之佈局使用。(IE8及以上版本適用)</div>
+    <div class="row">
+        <div class="block1 color-p">1</div>
+        <div class="block1 color-g">1</div>
+        <div class="block1 color-p">1</div>
+        <div class="block1 color-g">1</div>
+        <div class="block1 color-p">1</div>
+        <div class="block1 color-g">1</div>
+        <div class="block1 color-p">1</div>
+        <div class="block1 color-g">1</div>
+        <div class="block1 color-p">1</div>
+        <div class="block1 color-g">1</div>
+        <div class="block1 color-p">1</div>
+        <div class="block1 color-g">1</div>
+        <div class="block1 color-p">1</div>
+        <div class="block1 color-g">1</div>
+        <div class="block1 color-p">1</div>
+        <div class="block1 color-g">1</div>
+    </div>
+    <div class="init">各級Block將會隨著解析度而改變比例，讓使用行動裝置瀏覽時更加舒適。<br />但如果您只是需要一個更簡單且彈性的佈局方式，來取代浮動或表格，Lillian就成輕鬆達成。當然，固定寬度的佈局也可以做到。</div>
+    <div class="row">
+        <div class="color-p" style="width: 40%;">我會一直佔著40%</div>
+        <div class="color-g" style="width: 60%;">我會一直佔著60%</div>
+    </div>
+    <h2>第一部份︰比例運算為基礎的自適應模式範例</h2>
+    <p>1-1. 寬度不限縮均分四等份</p>
+    <div class="row">
+        <div class="block4 color-p">Block4</div>
+        <div class="block4 color-g">Block4</div>
+        <div class="block4 color-p">Block4</div>
+        <div class="block4 color-g">Block4</div>
+    </div>
+    <p>1-2. 寬度不限縮不均分四份</p>
+    <div class="row">
+        <div class="block1 color-p">Block1</div>
+        <div class="block3 color-g">Block3</div>
+        <div class="block5 color-p">Block5</div>
+        <div class="block7 color-g">Block7</div>
+    </div>
+    <p>1-3. 寬度限縮四等份</p>
+    <div class="block12 row">
+        <div class="block4 color-p">Block4</div>
+        <div class="block4 color-g">Block4</div>
+        <div class="block4 color-p">Block4</div>
+        <div class="block4 color-g">Block4</div>
+    </div>
+    <p>1-4. 寬度限縮不均分四份</p>
+    <div class="block12 row">
+        <div class="block1 color-p">Block1</div>
+        <div class="block3 color-g">Block3</div>
+        <div class="block5 color-p">Block5</div>
+        <div class="block7 color-g">Block7</div>
+    </div>
+    <p>1-5. 寬度限縮四等份置中</p>
+    <div class="block12 row block-center">
+        <div class="block4 color-p">Block4</div>
+        <div class="block4 color-g">Block4</div>
+        <div class="block4 color-p">Block4</div>
+        <div class="block4 color-g">Block4</div>
+    </div>
+    <p>1-6. 寬度不限縮四等份內容置中</p>
+    <div class="row block-in-center">
+        <div class="block3 color-p">Block3</div>
+        <div class="block3 color-g">Block3</div>
+        <div class="block3 color-p">Block3</div>
+        <div class="block3 color-g">Block3</div>
+    </div>
+    <p>1-7. 寬度限縮不均分四份置中</p>
+    <div class="block12 row block-center">
+        <div class="block1 color-p">Block1</div>
+        <div class="block3 color-g">Block3</div>
+        <div class="block5 color-p">Block5</div>
+        <div class="block7 color-g">Block7</div>
+    </div>
+    <p>1-8. 寬度不限縮不均分四份內容置中</p>
+    <div class="row block-in-center">
+        <div class="block1 color-p">Block1</div>
+        <div class="block2 color-g">Block2</div>
+        <div class="block3 color-p">Block3</div>
+        <div class="block4 color-g">Block4</div>
+    </div>
+    <p>1-9. 行動電話解析度強制為整行</p>
+    <div class="row block-in-center">
+        <div class="block1 color-p mb-fd-row">Block1</div>
+    </div>
+    <p>1-10. 行動電話解析度強制內容為置中</p>
+    <div class="row">
+        <div class="block4 color-p mb-fd-center">Block4</div>
+    </div>
+    <p>1-11. 行動電話解析度強制多項內容為置中</p>
+    <div class="row mb-fd-in-center">
+        <div class="block2 color-p">Block2</div>
+        <div class="block2 color-g">Block2</div>
+    </div>
+    <p>1-12. 行動電話解析度強制隱藏</p>
+    <div class="row">
+        <div class="block2 color-p">Block2</div>
+        <div class="block2 color-g mb-fd-hide">Block2(小於手機解析度就會消失)</div>
+    </div>
+    <p>1-13. 平板或行動電話解析度強制為整行</p>
+    <div class="row block-in-center">
+        <div class="block1 color-p tp-fd-row mb-fd-row">Block1</div>
+    </div>
+    <p>1-14. 平板或行動電話解析度強制內容為置中</p>
+    <div class="row">
+        <div class="block4 color-p tp-fd-center  mb-fd-center">Block4</div>
+    </div>
+    <p>1-15. 平板或行動電話解析度強制多項內容為置中</p>
+    <div class="row tp-fd-in-center mb-fd-in-center">
+        <div class="block2 color-p">Block2</div>
+        <div class="block2 color-g">Block2</div>
+    </div>
+    <p>1-16. 平板或行動電話解析度強制隱藏</p>
+    <div class="row">
+        <div class="block2 color-p mb-fd-hide">Block2(小於手機解析度就會消失)</div>
+        <div class="block2 color-g tp-fd-hide mb-fd-hide">Block2(小於平板解析度就會消失)</div>
+    </div>
+    <h2>第二部份︰自動伸縮的列佈局(IE8及以上版本適用)</h2>
+    <p>2-1. 彈性列佈局之一</p>
+    <div class="flex-row">
+        <div style="width: 100px;" class="color-p">我有100px寬</div>
+        <div style="width: 100px;" class="color-g">我有100px寬</div>
+        <div class="color-p">我將佔滿剩下的寬</div>
+    </div>
+    <p>2-2. 彈性列佈局之二</p>
+    <div class="flex-row">
+        <div style="width: 100px;" class="color-p">我有100px寬</div>
+        <div class="color-g">我將佔滿中間的寬</div>
+        <div style="width: 100px;" class="color-p">我有100px寬</div>
+    </div>
+    <p>2-3. 彈性列佈局之三</p>
+    <div class="flex-row">
+        <div class="color-p">我將佔滿多餘的寬</div>
+        <div style="width: 100px;" class="color-g">我有100px寬</div>
+        <div style="width: 100px;" class="color-p">我有100px寬</div>
+    </div>
+</body>
+</html>
