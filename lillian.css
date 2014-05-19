@@ -1,0 +1,137 @@
+.row{
+    letter-spacing: -0.31em;
+    *letter-spacing: normal;
+    *word-spacing: -0.43em;
+    text-rendering: optimizespeed;
+    font-family: FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+}
+.opera-only :-o-prefocus,.row{word-spacing: -0.43em}
+.row > *{
+    font-size: medium;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+.row > dt{ display: block; }  /* 修正對dt元素的影響 */
+.row-block > dt{ display: block; }  /* 修正對dt元素的影響 */
+.flex-row{  /*彈性列模式*/
+    display: table;
+    width: 100%;
+}
+.flex-row > *{
+    display: table-cell;
+}
+/* 區塊元素樣式定義 */
+.block1{ width: 6.25%; }
+.block2{ width: 12.5%; }
+.block3{ width: 18.75%; }
+.block4{ width: 25%; }
+.block5{ width: 31.25%; }
+.block6{ width: 37.5%; }
+.block7{ width: 43.75%; }
+.block8{ width: 50%; }
+.block9{ width: 56.25%; }
+.block10{ width: 62.5%; }
+.block11{ width: 68.75%; }
+.block12{ width: 75%; }
+.block13{ width: 81.25%; }
+.block14{ width: 87.5%; }
+.block15{ width: 93.75%; }
+.block16{ width: 100%; }
+.block-center{ margin: 0 auto; }
+.block-in-center{
+    text-align: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+}
+.block-in-center > *{
+    text-align: left;
+}
+/* 響應式切換定義-網格合併 */
+@media screen and (min-width: 1px) and (max-width: 480px){
+    .block1, .block2, .block3{ width: 33%; }
+    .block4, .block5, .block6, .block7{ width: 66%; }
+    .block8, .block9, .block10, .block11, .block12,
+    .block13, .block14, .block15{ width: 100%; }}
+@media screen and (min-width: 481px) and (max-width: 640px){
+    .block1, .block2, .block3{ width: 25%; }
+    .block4, .block5, .block6, .block7{ width: 50%; }
+    .block8, .block9, .block10, .block11{ width: 75% }
+    .block12, .block13, .block14, .block15{ width: 100%; }}
+@media screen and (min-width: 640px) and (max-width: 860px){
+    .block1, .block2, .block3{ width: 20%; }
+    .block4, .block5, .block6{ width: 40%; }
+    .block7, .block8, .block9{ width: 60%; }
+    .block10, .block11, .block12{ width: 80%; }
+    .block13, .block14, .block15{ width: 100%; }}
+@media screen and (min-width: 861px) and (max-width: 1024px){
+    .block1, .block2{ width: 14%; }
+    .block3, .block4{ width: 26%; }
+    .block5, .block6{ width: 39%; }
+    .block7, .block8{ width: 52%; }
+    .block9, .block10{ width: 65%; }
+    .block11, .block12{ width: 77%; }}
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+    .block1{ width: 8%; }
+    .block2{ width: 14%; }
+    .block3{ width: 20%; }
+    .block4{ width: 26%; }
+    .block5{ width: 32%; }
+    .block6{ width: 38%; }
+    .block7{ width: 44%; }}
+/* 響應式切換定義-裝置手動樣式 */
+@media screen and (min-width: 1px) and (max-width: 640px){
+    .mb-fd-row{ width: 100%; }
+    .mb-fd-hide{ display: none;}
+    .mb-fd-center{ margin: 0 auto; display: block; }
+    .mb-fd-in-center{
+        text-align: center;
+        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+    }
+    .mb-fd-in-center > *{
+        text-align: left;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 767px){
+    .mb-fd-row, .tp-fd-row{ width: 100%; }
+    .mb-fd-hide, .tp-fd-hide{ display: none;}
+    .mb-fd-center, .tp-fd-center{ margin: 0 auto; display: block; }
+    .mb-fd-in-center, .tp-fd-in-center{
+        text-align: center;
+        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+    }
+    .mb-fd-in-center > *, .tp-fd-in-center > *{
+        text-align: left;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px){
+    .tp-fd-row{ width: 100%; }
+    .tp-fd-hide{ display: none; }
+    .tp-fd-center{ margin: 0 auto; display: block; }
+    .tp-fd-in-center{
+        text-align: center;
+        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+    }
+    .tp-fd-in-center > *{
+        text-align: left;
+    }
+}
