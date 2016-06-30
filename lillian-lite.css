@@ -46,6 +46,10 @@
     white-space: nowrap;
     word-break: keep-all;
 }
+.word-break{
+    word-wrap: break-word;
+    word-break: break-all;
+}
 
 /*手錶*/
 @media screen and (min-width: 1px) and (max-width: 240px){
